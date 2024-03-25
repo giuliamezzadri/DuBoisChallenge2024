@@ -1,5 +1,6 @@
 ###packages
 rm(list=ls())   #to clean
+setwd("~/Desktop/DataViz Challenges/Du Bois/Challenge01/") #set folder
 library(ggplot2)
 library(showtext)
 library(dplyr)
@@ -11,9 +12,9 @@ options(digits=10)
 
 ###Specifications
 col_blue='#2a2c5fff'
-col_brown='#6f4f2fff'
+col_brown='#52382eff'
 col_beige='#bba178ff'
-col_red='#a9133aff'
+col_red='#bb2f49ff'
 col_pink='#e89793ff'
 col_yellow='#dbaf3cff'
 col_green='#36683dff'
@@ -63,7 +64,7 @@ fake_points2$Population=factor(fake_points2$Population, levels=vect_pop)
 
 ###plot 1870
 pl1870=ggplot(map1870, aes(long, lat, fill=Population)) +
-  geom_map(map=map1870, aes(map_id=id), color="grey20") + coord_quickmap() +
+  geom_map(map=map1870, aes(map_id=id), color="grey10") + coord_quickmap() +
   geom_point(data = fake_points, aes(x=long, y=lat, color=Population), alpha = 0) +
   scale_color_manual(values=c(col_blue, col_brown, col_beige), name='', labels=vect_pop_labs) +
   scale_fill_manual(values=c(col_blue, col_brown, col_beige, col_red, col_pink, col_yellow, col_green, col_background)) +
@@ -88,7 +89,7 @@ pl1870=ggplot(map1870, aes(long, lat, fill=Population)) +
 
 ###plot 1880
 pl1880=ggplot(map1880, aes(long, lat, fill=Population)) +
-  geom_map(map=map1880, aes(map_id=id), color="grey20") + coord_quickmap() +
+  geom_map(map=map1880, aes(map_id=id), color="grey10") + coord_quickmap() +
   geom_point(data = fake_points2, aes(x=long, y=lat, color=Population), alpha = 0) +
   scale_color_manual(values=c(col_red, col_pink, col_yellow, col_green), name='', labels=vect_pop_labs) +
   scale_fill_manual(values=c(col_blue, col_brown, col_beige, col_red, col_pink, col_yellow, col_green, col_background)) +
