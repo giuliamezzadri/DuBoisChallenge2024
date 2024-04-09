@@ -1,6 +1,5 @@
 ###packages
 rm(list=ls())   #to clean
-setwd("~/Desktop/DataViz Challenges/Du Bois/Challenge05/") #set folder
 library(ggplot2)
 library(showtext)
 library(dplyr)
